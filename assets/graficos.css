@@ -1,0 +1,45 @@
+body {
+  color: white;
+}
+h3,
+h4 {
+  margin: 0 0 0.5rem 0;
+}
+p {
+  font-size: 1.5rem;
+}
+.header-container p,
+.footer p {
+  font-size: 1rem;
+}
+/* proceso */
+.container-graphic-slides {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+.slide {
+  scroll-snap-align: center;
+  width: 100%;
+  height: inherit;
+  background-color: #2f88ff;
+}
+.slide:nth-child(even) {
+  background-color: skyblue;
+}
+.content-graphic-slide {
+  width: 70%;
+  height: inherit;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-graphic-slides img:not(img[alt="Gastronimic Machine logo"]) {
+  width: 100%;
+  min-height: auto;
+  max-height: 85%;
+}
