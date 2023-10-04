@@ -38,8 +38,17 @@ p {
   align-items: center;
 }
 
-.container-graphic-slides img:not(img[alt="Gastronimic Machine logo"]) {
+.slide:nth-child(2) .content-graphic-slide {
+  flex-flow: row wrap;
+}
+.slide:nth-child(2) h3 {
+  margin: 0 5rem;
+}
+
+.container-graphic-slides img:not(.header-container img) {
   max-width: 100%;
   min-height: auto;
-  max-height: 85%;
+  max-height: 90%;
+  border: medium dashed white;
+  box-shadow: 0 1rem 1rem -0.5rem rgba(0, 0, 0, 0.4);
 }

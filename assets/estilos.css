@@ -25,7 +25,8 @@ h4 {
 }
 p,
 pre,
-button {
+button,
+ol {
   font-family: "Poppins", sans-serif;
   text-align: justify;
 }
