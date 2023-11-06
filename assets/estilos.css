@@ -135,7 +135,7 @@ main {
 .hero-image {
   position: absolute;
   background-color: #212830;
-  background-image: url("../img/Maquina-estrucutra.png");
+  background-image: url("../img/Maquina-estructura.png");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -150,23 +150,25 @@ main {
   right: 0;
   bottom: 7rem;
   left: 0;
-  width: 35%;
+  width: 30%;
   height: 10vh;
   text-align: center;
   color: rgb(50, 50, 255);
   animation: opacity-scale 1s;
   z-index: 10;
+  background-color: rgba(245, 245, 220, 0.75);
+  border-radius: 1rem;
 }
 .title-hero-image > h1 {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
     sans-serif;
-  text-shadow: 0 0 0.125rem whitesmoke;
   display: inline;
   font-size: 3rem;
 }
-.title-hero-image > button {
+.title-hero-image > div {
   font-size: 1.75rem;
-  margin-top: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  margin: 0.5rem 25% 0;
   width: auto;
   height: 5.5vh;
   background-color: rgb(47, 47, 213);
@@ -175,15 +177,19 @@ main {
   color: rgb(241, 245, 179);
   transition: background-color 400ms;
 }
-.title-hero-image > button:hover {
+.title-hero-image > div:hover {
   background-color: rgb(37, 37, 152);
-  cursor: pointer;
 }
-.title-hero-image > button:active {
+.title-hero-image > div:active {
   background-color: rgb(37, 37, 152);
   outline-width: 0.225rem;
   outline-style: dotted;
   outline-offset: -0.2rem;
+}
+.title-hero-image label {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
 }
 .title-hero-image > img {
   filter: drop-shadow(0 0 0.15rem whitesmoke);
@@ -213,3 +219,112 @@ main {
   color: antiquewhite;
   margin: 0.5em 0 0 0;
 }
+
+@media (max-width: 600px) {
+  article {
+    margin: 0 1rem;
+  }
+  .title-hero-image {
+    width: 85%;
+    height: 7.5vh;
+  }
+  .header-container {
+    height: 12.5vh;
+    flex-wrap: wrap;
+    top: 0;
+  }
+  .header-container > * {
+    margin: 0 0.5rem;
+  }
+  .logo {
+    width: 70%;
+  }
+  .menu {
+    width: 70%;
+  }
+  .icons {
+    position: relative;
+    top: -2rem;
+    margin-left: 3rem;
+    width: 5%;
+  }
+  .footer {
+    height: 4vh;
+  }
+}
+
+/*:::Ventana Modal:::*/
+#btn-modal {
+  display: none;
+}
+.container-modal {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(71, 71, 71, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+#btn-modal:checked ~ .container-modal {
+  display: flex;
+}
+.content-modal {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.content-modal h2 {
+  margin-bottom: 15px;
+}
+.content-modal p {
+  padding: 15px 0px;
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+}
+.content-modal .btn-cerrar {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+.content-modal .btn-cerrar label {
+  padding: 7px 10px;
+  background-color: #5488a3;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+.content-modal .btn-cerrar label:hover,
+.content-modal a:hover {
+  background-color: #185e83;
+}
+.content-modal a {
+  color: beige;
+  background-color: #5488a3;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  transition: 300ms ease;
+}
+.cerrar-modal {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+@media screen and (max-width: 800px) {
+  .content-modal {
+    width: 90%;
+  }
+}
+/*:::Fin Ventana Modal:::*/
